@@ -27,7 +27,7 @@ void main() {
     }
 
     /// To setup mock method call handler
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
+    channel.setMethodCallHandler((MethodCall methodCall) async {
       switch (methodCall.method) {
         case 'fromUri':
           {
@@ -48,7 +48,7 @@ void main() {
     }
 
     /// To clean up mock method call handler
-    channel.setMockMethodCallHandler(null);
+    channel.setMethodCallHandler(null);
   });
 
   group('uri_to_file:', () {
